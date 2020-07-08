@@ -1,0 +1,386 @@
+html, body{
+    width: 100%;
+    font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+// 顶部导航
+#wrap-nav {
+    min-width: 1200px;
+    background: #2f2828;
+    .nav {
+        width: 1200px;
+        margin: 0 auto;
+        height: 36px;
+        width: 1203px;
+        color: #afafaf;
+        .nav-left, .nav-right {
+            li {
+                float: left;
+                position: relative;
+                div {
+                    padding-left:9px;
+                    padding-right:9px;
+                    a {
+                        line-height: 36px;
+                        font-size: 12px;
+                        
+                        text-align: center;
+                        float: left;
+                        color: #afafaf;
+                    }
+            }
+            }
+        }
+        
+        .nav-left {
+            float: left;
+            li:nth-of-type(2), li:nth-of-type(2) {
+                div {
+                    padding-left:8px;
+                    padding-right:8px;
+                }
+            }
+            @for $i from 2 to 9 {
+                li:nth-of-type(#{$i}) {
+                    &::before {
+                        content:'';
+                        width: 1px;
+                        height: 10px;
+                        display: block;
+                        background: #414141;
+                        position: absolute;
+                        top: 13px;
+                    }
+                }
+            }
+        }
+
+        .nav-right {
+            float: right;
+        }
+        @for $i from 3 to 7 {
+            li:nth-of-type(#{$i}) {
+                &::before {
+                    content:'';
+                    width: 1px;
+                    height: 10px;
+                    display: block;
+                    background: #414141;
+                    position: absolute;
+                    top: 13px;
+                }
+            }
+        }
+    }
+}
+
+// 头部
+#wrap-header {
+    min-width: 1200px;
+    // background: #fdfdfd;
+    .header {
+        margin: 0 auto;
+        height: 74px;
+        width: 1200px;
+        .header-left {
+            .logo {
+                float: left;
+                margin-top: 21px;
+                margin-right: 33px;
+                img {
+                    height: 36px;
+                }
+            }
+            .header-list {
+                float: left;
+                li {
+                    margin-left: 12px;
+                    margin-right: 12px;
+                    img {
+                        display: block;
+                        height: 24px;
+                    }
+                    float: left;
+                }
+                li:nth-of-type(1), li:nth-of-type(2){
+                    margin-top: 25px;
+                }
+                li:nth-of-type(3), li:nth-of-type(4), li:nth-of-type(5) {
+                    font-size: 15px;
+                    line-height: 15px;
+                    margin-top: 30px;
+                }
+            }
+        }
+        .header-right {
+            float: right;
+            margin-top: 23px;
+            margin-right: 2px;
+            .header-search {
+                form {
+                    position: relative;
+                    .search-txt {
+                        border-radius: 15px 0 0 15px;
+                        background: #f0f0f0;
+                        border: none;
+                        height: 30px;
+                        width: 212px;
+                        float: left;
+                        text-indent: 15px;
+                        height: 30px;
+                        line-height: 30px;
+                    }
+                    .search-btn {
+                        width: 30px;
+                        height: 30px;
+                        background: #f0f0f0;
+                        border-radius: 0 15px 15px 0;
+                        border: none;
+                        float: left;
+                    }
+                    span {
+                        position: absolute;
+                        left: 211px;
+                        top: 4px;
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+    .line {
+        margin: 3px auto 3px;
+        width: 100%;
+        height: 4px;
+        background-color: #f7f7f7;
+    }
+}
+
+// 商品
+#wrap-product-container {
+    min-width: 1200px;
+    .product-container {
+        width: 1200px;
+        margin: 0 auto;
+        .product-header {
+            width: 1200px;
+            height: 19px;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            a, span:last-of-type {
+                line-height: 19px;
+                color: #666;
+                font-family: \5FAE\8F6F\96C5\9ED1,\5B8B\4F53;
+            }
+            span:nth-of-type(1), span:nth-of-type(2), span:nth-of-type(3) {
+                display: inline-block;
+                text-align: center;
+                width: 30px;
+                font-size: 8px;
+                line-height: 19px;
+                color: #bbbbbb;
+            }
+        }
+        .product {
+            width: 1200px;
+            .product-img {
+                float: left;
+                width: 450px;
+                height: 450px;
+            }
+            .product-info {
+                margin-top: 20px;
+                float: left;
+                width: 700px;
+                height: 450px;
+                padding-left: 30px;
+                .product-info-header {
+                    margin-bottom: 12px;
+                    p {
+                        width: 700px;
+                        height: 31px;
+                        margin-bottom: 10px;
+                        font-size: 21px;
+                        color: #3a3a3a;
+                    }
+                    span:nth-of-type(1) {
+                        margin-right: 15px;
+                        color: #ca141d;
+                        font-size: 14px;
+                    }
+                    span:nth-of-type(2) {
+                        color: #3a3a3a;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .product-info-price {
+                width: 700px;
+                height: 196px;
+                padding-top: 14px;
+                padding-bottom: 3px;
+                background-color: #f5f5f5;
+                .price {
+                    width: 700px;
+                    height: 30px;
+                    .price-header {
+                        float: left;
+                        width: 85px;
+                        text-indent: 10px;
+                        line-height: 30px;
+                        font-size: 12px;
+                    }
+                    .price-info {
+                        float: left;
+                        color: #ca141d;
+                        padding-right: 3px;
+                        font-size: 24px;
+                        line-height: 30px;
+                        span {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .promote {
+                    width: 700px;
+                    height: 136px;
+                    .promote-header {
+                        float: left;
+                        width: 85px;
+                        text-indent: 10px;
+                        line-height: 30px;
+                        font-size: 12px;
+                    }
+                    .promote-info {
+                        float: left;
+                    }
+                    div {
+                        width: 615px;
+                        height: 30px;
+                        // padding-top: 13px;
+                        span {
+                            display: inline-block;
+                            height: 20px;
+                            margin-top: 13px;
+                            line-height: 18px;
+                            border: 1px solid #ca141d;
+                            padding: 0 6px;
+                            min-width: 24px;
+                            color: #ca141d;
+                            text-align: center;
+                            margin-right: 10px;
+                        }
+                        i {
+                            color: #3a3a3a;
+                            display: inline-block;
+                            height: 20px;
+                            margin-top: 13px;
+                            line-height: 18px;
+                            padding: 0 6px;
+                            min-width: 24px;
+                            text-align: center;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            .product-cart {
+                margin-top: 40px;
+                width: 730px;
+                height: 46px;
+                .count-container {
+                    width: 63px;
+                    float: left;
+                    border: 1px solid #d6d6d6;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    border-radius: 2px;
+                    .count-left {
+                        float: left;
+                        input {
+                            width: 41px;
+                            height: 44px;
+                            line-height: 44px;
+                            border: 0;
+                            font-size: 18px;
+                            text-align: center;
+                            border-right: 1px solid #e2e2e2;
+                        }
+                    }
+                    .count-right {
+                        float: left;
+                        .addCount {
+                            width: 100%;
+                            border-bottom: 1px solid #e2e2e2;
+                            display: block;
+                            font-size: 16px;
+                            width: 21px;
+                            height: 21px;
+                            line-height: 22px;
+                            text-align: center;
+                            color: #777;
+                            font-weight: bold;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                        .minusCount {
+                            width: 100%;
+                            display: block;
+                            font-size: 16px;
+                            width: 21px;
+                            height: 21px;
+                            line-height: 22px;
+                            text-align: center;
+                            color: #c4c4c4;
+                            font-weight: bold;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .button {
+                    float: left;
+                    .addCart {
+                        float: left;
+                        background: #fc600c;
+                        width: 172px;
+                        height: 46px;
+                        font-size: 18px;
+                        line-height: 46px;
+                        text-align: center;
+                        color: #fff;
+                        border-radius: 2px;
+                        border: 0;
+                        cursor: pointer;
+                        margin-right: 10px;
+                    }
+                    .removeCart {
+                        float: left;
+                        background: #ca151d;
+                        width: 172px;
+                        height: 46px;
+                        font-size: 18px;
+                        line-height: 46px;
+                        text-align: center;
+                        color: #fff;
+                        border-radius: 2px;
+                        border: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+html, body{
+    width: 100%;
+    font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+// 顶部导航
+#wrap-nav {
+    min-width: 1200px;
+    background: #f9f9f9;
+    .nav {
+        width: 1200px;
+        margin: 0 auto;
+        height: 36px;
+        width: 1203px;
+        color: #afafaf;
+        .nav-left, .nav-right {
+            li {
+                float: left;
+                position: relative;
+                div {
+                    padding-left:9px;
+                    padding-right:9px;
+                    a {
+                        line-height: 36px;
+                        font-size: 12px;
+                        
+                        text-align: center;
+                        float: left;
+                        color: #afafaf;
+                    }
+            }
+            }
+        }
+        
+        .nav-left {
+            float: left;
+            li:nth-of-type(2), li:nth-of-type(2) {
+                div {
+                    padding-left:8px;
+                    padding-right:8px;
+                }
+            }
+            @for $i from 2 to 9 {
+                li:nth-of-type(#{$i}) {
+                    &::before {
+                        content:'';
+                        width: 1px;
+                        height: 10px;
+                        display: block;
+                        background: #414141;
+                        position: absolute;
+                        top: 13px;
+                    }
+                }
+            }
+        }
+
+        .nav-right {
+            float: right;
+        }
+        @for $i from 3 to 7 {
+            li:nth-of-type(#{$i}) {
+                &::before {
+                    content:'';
+                    width: 1px;
+                    height: 10px;
+                    display: block;
+                    background: #414141;
+                    position: absolute;
+                    top: 13px;
+                }
+            }
+        }
+    }
+}
+
+// 头部
+#wrap-header {
+    min-width: 1200px;
+    // background: #fdfdfd;
+    .header {
+        margin: 0 auto;
+        height: 74px;
+        width: 1200px;
+        .header-left {
+            .logo {
+                float: left;
+                margin-top: 21px;
+                margin-right: 33px;
+                img {
+                    height: 36px;
+                }
+            }
+        }
+        .header-right {
+            float: right;
+            margin-top: 23px;
+            margin-right: 2px;
+        }
+    }
+    .line {
+        margin: 3px auto 3px;
+        width: 100%;
+        height: 4px;
+        background-color: #f7f7f7;
+    }
+}
+
