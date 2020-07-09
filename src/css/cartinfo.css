@@ -410,7 +410,7 @@ html, body {
   color: #c4c4c4;
   font-weight: bold;
   text-align: center;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 #wrap-product-container .product-container .product .product-cart .button {
   float: left;
@@ -429,7 +429,7 @@ html, body {
   cursor: pointer;
   margin-right: 10px;
 }
-#wrap-product-container .product-container .product .product-cart .button .removeCart {
+#wrap-product-container .product-container .product .product-cart .button .enterCart {
   float: left;
   background: #ca151d;
   width: 172px;
